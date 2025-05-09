@@ -35,37 +35,6 @@ For MySQL, create the tables manually or run a migration script.
 **5. Run the App**
 python app.py
 Open your browser and go to: http://127.0.0.1:5000
-Folder Structure
-
-movie-recommendation-system/
-│── model
-|   ├──data
-|   |   ├──choice.sqlite
-|   |   ├──movie.sqlite
-|   |   ├─popular.sqlite
-|   |   ├─users.sqlite
-|   |   ├─vectors.ann
-├── static/
-│   ├── css/
-│   ├── images/
-│   └── js/
-├── templates/
-│   ├── index.html
-│   ├── signin.html
-│   └── signup.html
-|   └── movie.html
-|   └── recommendation.html
-|    └── reset.html
-|   └── watch.html
-|   └── choice.html
-|    └──forgetPass.html
-├── app.py
-|──db.py
-|──annoysearch.py
-|──sqlqyery.py
-|──utilityFunction.py
-├── requirements.txt
-└── README.md
 
 **Screenshots**
 Index:![image](https://github.com/user-attachments/assets/9f8ea588-5795-4072-bf42-1dffc10c8965)
