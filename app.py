@@ -16,8 +16,8 @@ CORS(app, support_credentials=True)
 # Flask mail configuration
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = "kashishahuja2002@gmail.com"
-app.config['MAIL_PASSWORD'] = "dleiatmoyykkaafn"
+app.config['MAIL_USERNAME'] = "rishika1826@gmail.com"
+app.config['MAIL_PASSWORD'] = "Rishika18022006@"
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
@@ -234,13 +234,28 @@ def movie(movie_name):
 
     if "user" in session:
         def recommend(movie):
+            import os
+            from annoy import AnnoyIndex
+
+            # Check if the file exists
+            file_path = './model/data/vectors.ann'
+            if not os.path.exists(file_path):
+                print(f"Error: File {file_path} not found.")
+                return [], []  # Return empty lists as fallback
+
             for row in movies_result:
                 if row[2] == movie:
                     movie_index = row[0]
-                    break;
+                    break
+
             u = AnnoyIndex(5000, 'angular')
-            u.load('./model/data/vectors.ann')
-            movies_list = (u.get_nns_by_item(movie_index, 7))[1:7]  # returns index of 6 similar movies
+            try:
+                u.load(file_path)  # Attempt to load the file
+            except OSError as e:
+                print(f"Error loading AnnoyIndex file: {e}")
+                return [], []  # Return empty lists as fallback
+
+            movies_list = (u.get_nns_by_item(movie_index, 7))[1:7]  # Returns index of 6 similar movies
 
             recommended_movies = []
             movie_posters = []
