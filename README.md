@@ -168,7 +168,5 @@ After vectorization, **Cosine Similarity** is computed using the **Annoy algorit
 
 ---
 
-## 📄 Documentation  
-- 📝 [Project Report](documents/ProjectReport.docx.pdf)  
+## 📄 Documentation    
 - 📚 [Documentation](documents/Documentation.pdf)  
-- 📊 [Presentation](documents/Presentation.pdf)
