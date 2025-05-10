@@ -169,4 +169,4 @@ After vectorization, **Cosine Similarity** is computed using the **Annoy algorit
 ---
 
 ## 📄 Documentation    
-- 📚 [Documentation](Documentation.docx)  
+- 📚 A complete project report for the system with a use case diagram, web flow, ER diagram, etc can be found here:[Documentation](Documentation.docx)  
