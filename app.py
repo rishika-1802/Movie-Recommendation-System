@@ -344,3 +344,20 @@ def reset():
 def change():
     if request.method == 'POST':
         newPass = request.form["newPass"]
+        email = session.get("forgot_email")
+
+        if email:
+            conn = db_connection("users")
+            cursor = conn.cursor()
+            cursor.execute("UPDATE users SET password = ? WHERE email = ?", (newPass, email))
+            conn.commit()
+            conn.close()
+            return "Password changed successfully. <br><a href='/signin'>Click here to sign in</a>"
+        else:
+            return "Session expired. Please try again from the Forgot Password page."
+    return render_template("changePass.html")
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
+
