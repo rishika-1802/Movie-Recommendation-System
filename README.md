@@ -164,9 +164,25 @@ After vectorization, **Cosine Similarity** is computed using the **Annoy algorit
 ---
 
 ## 📈 Future Scope  
-- 👍 **Like/Dislike-based Suggestions:** Train on preference data for improved recommendations  
-- 🎞️ **Dynamic Movie Playback:** Customize the Watch Page for each movie  
-- 🤝 **Hybrid System:** Combine collaborative filtering with the current content-based approach  
+🎬 Watch History Tracking
+➤ Automatically log and display movies the user has watched, enabling personalized suggestions and rewatch options.
+
+💬 Comment System
+➤ Allow users to leave comments and reviews on movies — encourages interaction and builds a sense of community.
+
+📺 Full Streaming Support
+➤ Integrate a real video streaming module to watch full movies directly on the platform instead of trailers only.
+
+🎨 Better UI/UX Design
+➤ Revamp the front-end with animations, cleaner layouts, and a modern, mobile-first design using CSS frameworks like Tailwind or Bootstrap.
+
+🔔 Notifications System 
+➤ Notify users about new releases or recommendations via email or in-app alerts.
+
+🧠 Hybrid Recommendation Engine 
+➤ Combine content-based filtering with collaborative filtering or deep learning to improve accuracy and personalization.
+
+  
 
 ---
 
